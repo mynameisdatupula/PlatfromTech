@@ -66,7 +66,7 @@
 					<div class="container">
 						<div class="jumbotron">
 								<center>
-								<p><img src="images/for GUI/tree.jpg" width="100%"/></p>
+								<p><img src="images/for GUI/tinstar.png" width="100%"/></p>
 								</center>
 						</div>
 					</div>

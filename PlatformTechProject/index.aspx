@@ -7,6 +7,7 @@
     <title>TinStar Resort</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<link rel="stylesheet" href="css/style.css"/>
     <script src="Jssor.Slider.FullPack/js/jquery-1.9.1.min.js"></script>
     <script src="Jssor.Slider.FullPack/js/jssor.slider.mini.js"></script>
     <script src="Jssor.Slider.FullPack/js/jssor.slider.min.js"></script>
@@ -63,7 +64,10 @@
 
 				</div>
 
+                       <br />
+                        <br />
 					<div class="container" >
+
 						<!--<div id="jumbotron" style="margin:0 auto;">
 								
 							<p><img src="Jssor.Slider.FullPack/img/home/01.jpg" width="100%"/></p>

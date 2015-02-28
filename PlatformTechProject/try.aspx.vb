@@ -1,5 +1,6 @@
 ﻿Imports System.Net.Mail
 Imports System.Net
+Imports System.Data.Sql
 
 
 Public Class _try

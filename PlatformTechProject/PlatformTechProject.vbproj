@@ -83,6 +83,7 @@
   <ItemGroup>
     <Content Include="about.aspx" />
     <Content Include="contact.aspx" />
+    <Content Include="css\style.css" />
     <Content Include="index.aspx" />
     <Content Include="promo.aspx" />
     <Content Include="try.aspx" />
