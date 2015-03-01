@@ -57,6 +57,7 @@
         <div>
         <asp:Button ID="btnCompute" runat="server" Text="Compute" />
         </div>
+        <asp:TextBox ID="TextBox1" runat="server" CssClass="txtMode"></asp:TextBox>
         <br />
         <br />
         <div> <asp:Label ID="lblAnswer" runat="server"></asp:Label></div>

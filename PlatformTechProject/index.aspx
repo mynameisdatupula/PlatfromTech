@@ -65,7 +65,8 @@
 				</div>
 
                        <br />
-                        <br />
+                        
+                        
 					<div class="container" >
 
 						<!--<div id="jumbotron" style="margin:0 auto;">
@@ -74,11 +75,11 @@
                             <p><img src="Jssor.Slider.FullPack/img/home/02.jpg" width="100%"/></p>
 								
 						</div>-->
-                        <div class="jumbotron" style="padding: 30px 0px;">
-                            <div  id="slider1_container" style="margin:0 auto; position: relative; top: 0px; left: 0px; width: 1000px; height: 400px;">
+                        <div class="jumbotron" style="padding: 30px 0px 40px 0px;">
+                            <div  id="slider1_container" style="margin:0 auto; position: relative; top: 0px; left: 0px; width: 950px; height: 480px;">
                            
                                 <!-- Slides Container -->
-                                <div u="slides" style="cursor: move;  overflow: hidden; left: 0px; top: 0px; width: 1000px; height: 400px;">
+                                <div u="slides" style="cursor: move;  overflow: hidden; left: 0px; top: 0px; width: 950px; height: 480px;">
                                     <div><img u="image" src="images/for slider/resort10.jpg" /></div>
                                     <div><img u="image" src="images/for slider/resort4.jpg" /></div>
                                     <div><img u="image" src="images/for slider/resort9.jpg" /></div>
@@ -97,7 +98,7 @@
 						<center>
 						<div class="row">
 							<div class="col-md-4">
-								<p><img src="images/for GUI/pool1.jpg" class="img-thumbnail"/></p>
+								<p><img src="images/for GUI/resort13.jpg" class="img-thumbnail" width="88%"/></p>
 								<h4><a href="#">Dip in a relaxing water from the mountains</a></h4>
 							</div>
 
@@ -112,19 +113,19 @@
 							</div>
 
 							<div class="col-md-4">
-								<p><img src="images/for GUI/play.jpg" class="img-thumbnail"/></p>
+								<p><img src="images/for GUI/resort9.jpg" class="img-thumbnail"/></p>
 								<h4><a href="#">Play in our indoor park with your kids</a></h4>
 							</div>
 
 
 							<div class="col-md-4">
-								<p><img src="images/for GUI/clown.jpg" class="img-thumbnail"/></p>
-								<h4><a href="#">Enjoy the beatiful creatures of the sea in our place</a></h4>
+								<p><img src="images/for GUI/resort8.jpg" class="img-thumbnail"/></p>
+								<h4><a href="#">Enjoy a refreshing touch of our pool</a></h4>
 							</div>
 
 							<div class="col-md-4">
 								<p><img src="images/for GUI/love.jpg" class="img-thumbnail"/></p>
-								<h4><a href="#">Watch the sunset and fall in love</a></h4>
+								<h4><a href="#">Have a friendly in our billiard set</a></h4>
 							</div>
 						</div>
 						</center>

@@ -1,2 +1,6 @@
-﻿.jumbotron {background-color: #d70ecc;
+﻿.jumbotron {background-color: rgba(255, 67, 165, 0.59);
+           padding: 30px 0px;
+}
+
+body { background-color: rgba(233, 8, 180, 0.20);
 }
