@@ -59,6 +59,33 @@ Partial Public Class promo
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''cbChoices1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbChoices1 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''cbChoices2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbChoices2 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
+    '''cbChoices3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents cbChoices3 As Global.System.Web.UI.WebControls.CheckBox
+
+    '''<summary>
     '''btnSubmit control.
     '''</summary>
     '''<remarks>

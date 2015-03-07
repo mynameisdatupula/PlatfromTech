@@ -115,19 +115,20 @@
 						    
 						  </div>
 							  <div class="checkbox">
-							    <label>
-							      <input type="checkbox"/> The Luxury
-							    </label>
+							    
+                                    <asp:CheckBox ID="cbChoices1"  runat="server" Text="The Luxury" Checked ="true" />
+						
+							    
 							  </div>
 							  <div class="checkbox">
-							    <label>
-							      <input type="checkbox"/> The Best
-							    </label>
+							    
+							       <asp:CheckBox ID="cbChoices2"  runat="server" Text="The Best" />
+							    
 							  </div>
 							  <div class="checkbox">
-							    <label>
-							      <input type="checkbox"/> The Great
-							    </label>
+							    
+							        <asp:CheckBox ID="cbChoices3"  runat="server" Text="The Great" />
+							
 							  </div>
 
                           <asp:Button ID="btnSubmit" CssClass="btn btn-primary" runat="server" Text="Submit" />

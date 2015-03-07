@@ -45,6 +45,7 @@
 									<li><a href="promo.aspx">Promotion</a></li>
 									<li><a href="about.aspx">About</a></li>
 									<li><a href="contact.aspx">Contact Us</a></li>
+                                    <li><a href="#LOG-IN" data-toggle="modal">Log In</a></li>
 
 										<li class="dropdown">
 											<a href="#" class="dropdown-toggle" data-toggle="dropdown">Social Media<b class="caret"></b> </a>
@@ -139,7 +140,37 @@
 						</div>
 					</div>
 
-							<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+                        <div class="modal fade" id="LOG-IN" role="dialog">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <form class="form-horizontal">
+                                            <div class="modal-header">
+                                                <h2>Log In</h2>
+                                            </div>
+                                                <div class="modal-body">
+                                                    <div class="form-group">
+                                                        <label for="log-in-name" class="col-lg-2 control-label">Username:</label>
+                                                        <div class="col-lg-10">
+                                                            <input type="text" class="form-control" id="log-in-name" />
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="form-group">
+                                                        <label for="password-name" class="col-lg-2 control-label">Password:</label>
+                                                        <div class="col-lg-10">
+                                                            <input type="password" class="form-control" id="password-name" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <div class="btn btn-info" data-dismiss="modal">Submit</div>
+                                                </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+							<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
 							<script type="text/javascript" src="js/bootstrap.js"></script>
 
 </body>

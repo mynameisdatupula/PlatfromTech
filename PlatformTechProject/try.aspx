@@ -57,6 +57,7 @@
         <div>
         <asp:Button ID="btnCompute" runat="server" Text="Compute" />
         </div>
+        <asp:CheckBox ID="CheckBox1" runat="server" Checked="True" Text="sadsadasdsa" />
         <asp:TextBox ID="TextBox1" runat="server" CssClass="txtMode"></asp:TextBox>
         <br />
         <br />
