@@ -15,9 +15,16 @@ Public Class promo
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        txtAddress.Text = String.Empty
+        txtCnum.Text = String.Empty
+        txtEmail.Text = String.Empty
+        txtName.Text = String.Empty
+
         connectionString = "server=localhost; userid=root; password=; database=db_tinstarresort;"
         connection = New MySqlConnection(connectionString)
         connection.Open()
+
+        Response.Write("<script> alert('Successful connection to the Database")
 
 
     End Sub
@@ -29,15 +36,15 @@ Public Class promo
 
 
         If (cbChoices1.Checked) Then
-            strReservation += "The Luxury\n"
+            strReservation += "The Luxury|"
         End If
 
         If (cbChoices2.Checked) Then
-            strReservation += "The Best\n"
+            strReservation += "The Best|"
         End If
 
         If (cbChoices3.Checked) Then
-            strReservation += "The Great"
+            strReservation += "The Great|"
         End If
 
         Try
@@ -59,7 +66,7 @@ Public Class promo
 
 
         Catch ex As Exception
-            Response.Write(ex.Message)
+            Response.Write("<script> alert('" + ex.Message + "') </script>")
         End Try
 
     End Sub
