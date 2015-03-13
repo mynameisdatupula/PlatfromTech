@@ -18,6 +18,25 @@
         jQuery(document).ready(function ($) {
             var options = { $AutoPlay: true };
             var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+            function ScaleSlider() {
+                var parentWidth = $('#slider1_container').parent().width();
+                if (parentWidth) {
+                    jssor_slider1.$ScaleWidth(parentWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            //Scale slider after document ready
+            ScaleSlider();
+
+            //Scale slider while window load/resize/orientationchange.
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+
         });
     </script>
 	<!--<link rel="stylesheet" href="css/style.css"/>-->
@@ -77,22 +96,24 @@
 								
 						</div>-->
                         <div class="jumbotron" style="padding: 30px 0px 40px 0px;">
-                            <div  id="slider1_container" style="margin:0 auto; position: relative; top: 0px; left: 0px; width: 950px; height: 480px;">
+                            <div  id="slider1_container" style="margin:0 auto; position: relative; top: 0px; left: 0px; width: 950px; height: 480px; overflow:hidden">
                            
                                 <!-- Slides Container -->
-                                <div u="slides" style="cursor: move;  overflow: hidden; left: 0px; top: 0px; width: 950px; height: 480px;">
-                                    <div><img u="image" src="images/for slider/resort10.jpg" /></div>
-                                    <div><img u="image" src="images/for slider/resort4.jpg" /></div>
-                                    <div><img u="image" src="images/for slider/resort9.jpg" /></div>
-                                    <div><img u="image" src="images/for slider/resort11.jpg" /></div>
-                                    <div><img u="image" src="images/for slider/resort12.jpg" /></div>
+                                <div class="img-responsive" u="slides" style="cursor: move;  overflow: hidden; position:absolute; left: 0px; top: 0px; width: 950px; height: 480px;">
+                                    <div class="img-responsive"><img class="img-responsive" u="image" src="images/for slider/resort10.jpg" /></div>
+                                    <div class="img-responsive"><img class="img-responsive" u="image" src="images/for slider/resort4.jpg" /></div>
+                                    <div class="img-responsive"><img class="img-responsive" u="image" src="images/for slider/resort9.jpg" /></div>
+                                    <div class="img-responsive"><img class="img-responsive" u="image" src="images/for slider/resort11.jpg" /></div>
+                                    <div class="img-responsive"><img class="img-responsive" u="image" src="images/for slider/resort12.jpg" /></div>
                                 </div>
+
+                                <script>jssor_slider1_starter('slider1_container');</script>
                             </div>
                         </div>
 					</div>
                  
-                     </br>
-                     </br>
+                     <br/>
+                     <br/>
                     
 
 					<div class="container">
@@ -143,7 +164,7 @@
                         <div class="modal fade" id="LOG-IN" role="dialog">
                             <div class="modal-dialog">
                                 <div class="modal-content">
-                                    <form class="form-horizontal">
+                                    <form class="form-horizontal" method="post" action="index.aspx" runat="server">
                                             <div class="modal-header">
                                                 <h2>Log In</h2>
                                             </div>
@@ -151,19 +172,30 @@
                                                     <div class="form-group">
                                                         <label for="log-in-name" class="col-lg-2 control-label">Username:</label>
                                                         <div class="col-lg-10">
-                                                            <input type="text" class="form-control" id="log-in-name" />
+                                                            <asp:TextBox ID ="txtname" CssClass="form-control" runat="server" />
+                                                            
                                                         </div>
                                                     </div>
 
                                                     <div class="form-group">
                                                         <label for="password-name" class="col-lg-2 control-label">Password:</label>
                                                         <div class="col-lg-10">
-                                                            <input type="password" class="form-control" id="password-name" />
+                                                            <asp:TextBox ID ="txtpassword" CssClass="form-control" TextMode="Password" runat="server" />
+                                                            
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div class="modal-footer">
-                                                    <div class="btn btn-info" data-dismiss="modal">Submit</div>
+                                                    <% If Session("indexErrors") IsNot Nothing Then
+                                                            Response.Write(Session("indexErrors"))
+                                                            Session.Abandon()
+                                                            
+                                                        End If
+                                                       
+                                                       %>
+                                                    <br />
+                                                    <asp:Button OnClick="btnSubmit_Click" runat="server" CssClass="btn-info" ID="btnSubmit" Text="Submit" />
+                                                     <!--<div class="btn btn-info" data-dismiss="modal">Submit</div>-->
                                                 </div>
                                     </form>
                                 </div>

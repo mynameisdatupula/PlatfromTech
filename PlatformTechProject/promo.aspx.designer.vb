@@ -32,6 +32,15 @@ Partial Public Class promo
     Protected WithEvents txtName As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''requiredName control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents requiredName As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''txtAddress control.
     '''</summary>
     '''<remarks>
@@ -39,6 +48,15 @@ Partial Public Class promo
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents txtAddress As Global.System.Web.UI.WebControls.TextBox
+
+    '''<summary>
+    '''requiredAddress control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents requiredAddress As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
     '''txtCnum control.
@@ -50,6 +68,15 @@ Partial Public Class promo
     Protected WithEvents txtCnum As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
+    '''requiredNumber control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents requiredNumber As Global.System.Web.UI.WebControls.RequiredFieldValidator
+
+    '''<summary>
     '''txtEmail control.
     '''</summary>
     '''<remarks>
@@ -59,31 +86,31 @@ Partial Public Class promo
     Protected WithEvents txtEmail As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''cbChoices1 control.
+    '''requiredEmail control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cbChoices1 As Global.System.Web.UI.WebControls.CheckBox
+    Protected WithEvents requiredEmail As Global.System.Web.UI.WebControls.RequiredFieldValidator
 
     '''<summary>
-    '''cbChoices2 control.
+    '''CheckBoxTableChoices control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cbChoices2 As Global.System.Web.UI.WebControls.CheckBox
+    Protected WithEvents CheckBoxTableChoices As Global.System.Web.UI.HtmlControls.HtmlGenericControl
 
     '''<summary>
-    '''cbChoices3 control.
+    '''CheckBoxListChoices control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents cbChoices3 As Global.System.Web.UI.WebControls.CheckBox
+    Protected WithEvents CheckBoxListChoices As Global.System.Web.UI.WebControls.CheckBoxList
 
     '''<summary>
     '''btnSubmit control.

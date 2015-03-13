@@ -1,5 +1,7 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="promo.aspx.vb" Inherits="PlatformTechProject.promo" %>
 
+<%@ Import Namespace="MySql.Data" %>
+<%@ Import Namespace="MySql.Data.MySqlClient" %>
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -21,6 +23,8 @@
             var jssor_slider1 = new $JssorSlider$('slider1_container', options);
         });
     </script>
+
+   
 </head>
 <body>
    
@@ -79,21 +83,11 @@
 								<td><h3>Description</h3></td>
 								<td><h3>Prices</h3></td>
 							</tr>
-							<tr>
-								<td>The Luxury</td>
-								<td>1 Bed and 1 Bathroom</td>
-								<td>P5,000.00</td>
-							</tr>
-							<tr>
-								<td>The Best</td>
-								<td>3 Bed and 1 Bathroom</td>
-								<td>P7,000.00</td>
-							</tr>
-							<tr>
-								<td>The Great</td>
-								<td>4 Bed and 2 Bathroom</td>
-								<td>P8,000.00</td>
-							</tr>
+                         
+                             <% printTables()
+                                 
+                                     
+                                %>
 						</table>
 						<p></p>
 						<p></p>
@@ -101,42 +95,46 @@
 					<form id="formReserve" runat="server" >
 						  <div class="form-group">
 						    <asp:Textbox ID="txtName" runat="server" CssClass="form-control" placeholder="Contact Name"/>
+                              <asp:RequiredFieldValidator ControlToValidate="txtName"
+						  Text="Contact name required" runat="server" ID="requiredName" />
+
+
 						  </div>
 						  <div class="form-group">
                               <asp:Textbox ID="txtAddress" runat="server" CssClass="form-control" placeholder="Contact Address"/>
+                              <asp:RequiredFieldValidator ControlToValidate="txtAddress"
+						        Text="Address required" runat="server" ID="requiredAddress" />
 						    
 						  </div>
 						  <div class="form-group">
                             <asp:Textbox ID="txtCnum" runat="server" TextMode="Number" CssClass="form-control" placeholder="Contact Number"/>
-						    
+						    <asp:RequiredFieldValidator ControlToValidate="txtCnum" 
+						     Text="Contact number required" runat="server" ID="requiredNumber" />
 						  </div>
+
 						  <div class="form-group">
                             <asp:Textbox ID="txtEmail" runat="server" TextMode="Email" CssClass="form-control" placeholder="Email Address"/>
-						    
-						  </div>
-							  <div class="checkbox">
-							    
-                                    <asp:CheckBox ID="cbChoices1"  runat="server" Text="The Luxury" Checked ="true" />
-						
-							    
-							  </div>
-							  <div class="checkbox">
-							    
-							       <asp:CheckBox ID="cbChoices2"  runat="server" Text="The Best" />
-							    
-							  </div>
-							  <div class="checkbox">
-							    
-							        <asp:CheckBox ID="cbChoices3"  runat="server" Text="The Great" />
-							
-							  </div>
+						    <asp:RequiredFieldValidator ControlToValidate="txtEmail"
+						  Text="Email required" runat="server" ID="requiredEmail" />
 
-                          <asp:Button ID="btnSubmit" CssClass="btn btn-primary" runat="server" Text="Submit" />
-						 
-						  <p></p>
-						  <p></p>
+						  </div>
+                       
+                            <div id="CheckBoxTableChoices" runat="server">
+
+                                <asp:CheckBoxList ID="CheckBoxListChoices" runat="server">
+                                </asp:CheckBoxList>
+                                </div>
+
+                              <p style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; color: #FF0000">  <%Response.Write(strRequiredCheck)%> </p>
+
+
+                         <div><p id="errors" style="font-family: &quot;Trebuchet MS&quot;, &quot;Lucida Sans Unicode&quot;, &quot;Lucida Grande&quot;, &quot;Lucida Sans&quot;, Arial, sans-serif; color: #FF0000"> <%Response.Write(strErrors)%></p></div>
+                         <br />
+                        <asp:Button ID="btnSubmit" CssClass="btn btn-primary" runat="server" Text="Submit" />     
+                           </div>
+                        <br />
 					</form>
-					</div>
+				</div>
 
 					<div class="navbar navbar-default navbar-static-bottom">
 						<div class="container">

@@ -15,17 +15,37 @@
         jQuery(document).ready(function ($) {
             var options = { $AutoPlay: true };
             var jssor_slider1 = new $JssorSlider$('slider1_container', options);
+
+            function ScaleSlider() {
+                var parentWidth = $('#slider1_container').parent().width();
+                if (parentWidth) {
+                    jssor_slider1.$ScaleWidth(parentWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+
+            //Scale slider after document ready
+            ScaleSlider();
+
+            //Scale slider while window load/resize/orientationchange.
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
         });
     </script>
 </head>
 <body>
 
-    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px;">
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 600px; height: 300px; overflow: hidden;">
     <!-- Slides Container -->
     <div u="slides" style="cursor: move; position: absolute; overflow: hidden; left: 0px; top: 0px; width: 600px; height: 300px;">
-        <div><img u="image" src="Jssor.Slider.FullPack/img/home/01.jpg" /></div>
-        <div><img u="image" src="Jssor.Slider.FullPack/img/home/02.jpg" /></div>
+        <div><img u="image" src="images/for slider/resort10.jpg" /></div>
+        <div><img u="image" src="images/for slider/resort11.jpg" /></div>
     </div>
+
+        <script>jssor_slider1_starter('slider1_container');</script>
 </div>
     <form id="form1" runat="server">
     <div align="center" >
@@ -64,6 +84,17 @@
         <div> <asp:Label ID="lblAnswer" runat="server"></asp:Label></div>
         <br />
     
+       <asp:CheckBoxList ID="chklstStates" runat="server" Width="124px">
+           <asp:ListItem Selected="True">The Great</asp:ListItem>
+           <asp:ListItem>The Best</asp:ListItem>
+           <asp:ListItem>The Luxury</asp:ListItem>
+               
+            </asp:CheckBoxList>
+        <asp:DropDownList ID="DropDownList1" runat="server">
+
+
+        </asp:DropDownList>
+        <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
     </div>
     </form>
 </body>
